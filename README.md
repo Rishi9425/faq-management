@@ -1,20 +1,4 @@
 **FAQ Management System with Multi-language Support**
-This project implements a Django-based FAQ management system that supports multilingual content. It allows for dynamic translation of FAQ questions and answers and provides a REST API to retrieve FAQs in various languages. The system leverages a WYSIWYG editor (django-ckeditor) for formatting answers, uses Google Translate for translation support, and includes a caching mechanism for improved performance.
-
-**Table of Contents**
-Project Description
-Features
-Installation
-Step 1: Set up the Environment
-Step 2: Install Dependencies
-Step 3: Run the Application
-Docker Setup
-API Usage
-Fetch FAQs in English
-Fetch FAQs in Hindi
-Fetch FAQs in Bengali
-
-**Project Description**
 This project allows users to manage FAQs through a Django application. The FAQs are stored with a rich-text editor for formatting answers, and multilingual translations are automatically handled via Google Translate API. The system also caches translations using Redis for faster access.
 
 **Features**
