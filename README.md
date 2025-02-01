@@ -70,4 +70,4 @@ http://127.0.0.1:8000/api/faqs/
 http://127.0.0.1:8000/api/faqs/?lang=hi
 
 **Fetch FAQs in Bengali**
-http://127.0.0.1:8000/api/faqs?lang=bn
+http://127.0.0.1:8000/api/faqs/?lang=bn
