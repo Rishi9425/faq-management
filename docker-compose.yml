@@ -1,0 +1,43 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    container_name: faq-app
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongo
+      - redis
+    env_file:
+      - .env
+    networks:
+      - app_network
+
+  mongo:
+    image: mongo
+    container_name: mongo-db
+    restart: always
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    networks:
+      - app_network
+
+  redis:
+    image: redis
+    container_name: redis-container
+    restart: always
+    ports:
+      - "6379:6379" # Fixed: Your app expects Redis on 6379
+    networks:
+      - app_network
+
+volumes:
+  mongo_data:
+
+
+networks:
+  app_network:
+    driver: bridge
